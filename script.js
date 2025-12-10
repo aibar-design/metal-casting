@@ -1,8 +1,9 @@
+// Простой слайдер для всех блоков с data-slider
 document.addEventListener("DOMContentLoaded", () => {
-    const sliders = document.querySelectorAll(".slider");
+    const sliders = document.querySelectorAll("[data-slider]");
 
-    sliders.forEach(slider => {
-        const slides = slider.querySelectorAll(".slide");
+    sliders.forEach((slider) => {
+        const slides = slider.querySelectorAll(".slider-slide");
         const prevBtn = slider.querySelector(".prev");
         const nextBtn = slider.querySelector(".next");
 
@@ -16,19 +17,14 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         };
 
-        const goPrev = () => {
+        prevBtn.addEventListener("click", () => {
             current = (current - 1 + slides.length) % slides.length;
             showSlide(current);
-        };
+        });
 
-        const goNext = () => {
+        nextBtn.addEventListener("click", () => {
             current = (current + 1) % slides.length;
             showSlide(current);
-        };
-
-        prevBtn.addEventListener("click", goPrev);
-        nextBtn.addEventListener("click", goNext);
-
-        setInterval(goNext, 5000);
+        });
     });
 });

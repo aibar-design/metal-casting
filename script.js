@@ -1,34 +1,42 @@
+// Простой рабочий слайдер для всех блоков .slider
 document.addEventListener("DOMContentLoaded", () => {
-    const sliders = document.querySelectorAll(".slider");
+  const sliders = document.querySelectorAll(".slider");
 
-    sliders.forEach(slider => {
-        const slides = slider.querySelectorAll(".slide");
-        const prevBtn = slider.querySelector(".prev");
-        const nextBtn = slider.querySelector(".next");
+  sliders.forEach((slider) => {
+    const slides = slider.querySelectorAll(".slide");
+    const prevBtn = slider.querySelector(".slider-prev");
+    const nextBtn = slider.querySelector(".slider-next");
 
-        if (slides.length === 0) return;
+    if (!slides.length) return;
 
-        let current = 0;
+    let current = 0;
 
-        const showSlide = (index) => {
-            slides.forEach((slide, i) => {
-                slide.classList.toggle("active", i === index);
-            });
-        };
+    // показать нужный слайд
+    function showSlide(index) {
+      slides[current].classList.remove("active");
+      current = (index + slides.length) % slides.length;
+      slides[current].classList.add("active");
+    }
 
-        const goPrev = () => {
-            current = (current - 1 + slides.length) % slides.length;
-            showSlide(current);
-        };
-
-        const goNext = () => {
-            current = (current + 1) % slides.length;
-            showSlide(current);
-        };
-
-        prevBtn.addEventListener("click", goPrev);
-        nextBtn.addEventListener("click", goNext);
-
-        setInterval(goNext, 5000);
+    // начальное состояние
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("active", i === 0);
     });
+
+    prevBtn.addEventListener("click", () => showSlide(current - 1));
+    nextBtn.addEventListener("click", () => showSlide(current + 1));
+  });
+
+  // Плавная прокрутка по якорям (О нас / Услуги / Контакты)
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener("click", (e) => {
+      const targetId = link.getAttribute("href");
+      if (targetId === "#" || targetId === "") return;
+      const targetEl = document.querySelector(targetId);
+      if (!targetEl) return;
+
+      e.preventDefault();
+      targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
 });

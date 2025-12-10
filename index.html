@@ -1,187 +1,40 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <title>Metal Casting Resource</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metal Casting Resource</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- HERO-БЛОК С ФОНОМ -->
-  <header class="hero">
-    <!-- верхняя чёрная полоса с флажками и логотипом -->
-    <div class="top-bar">
-      <div class="lang-switcher">
-        <button class="lang-btn active">
-          <span class="lang-icon lang-icon-ru"></span>
-          RU
-        </button>
-        <button class="lang-btn">
-          <span class="lang-icon lang-icon-en"></span>
-          EN
-        </button>
-        <button class="lang-btn">
-          <span class="lang-icon lang-icon-ua"></span>
-          UA
-        </button>
-      </div>
-
-      <div class="logo-wrap">
-        <img src="images/logo.jpg" alt="Metal Casting Resource" class="logo" />
-      </div>
-    </div>
-
-    <!-- тонкая белая линия -->
-    <div class="hero-divider"></div>
-
-    <!-- ряд: О НАС / УСЛУГИ / КОНТАКТЫ + кнопки -->
-    <nav class="hero-nav">
-      <div class="nav-links">
-        <a href="#about">О нас</a>
-        <a href="#services">Услуги</a>
-        <a href="#contacts">Контакты</a>
-      </div>
-
-      <div class="cta-buttons">
-        <a
-          class="cta-btn tg"
-          href="https://t.me/+380504742490"
-          target="_blank"
-          rel="noopener"
-        >
-          Telegram
-        </a>
-        <a
-          class="cta-btn wa"
-          href="https://wa.me/380504742490"
-          target="_blank"
-          rel="noopener"
-        >
-          WhatsApp
-        </a>
-        <a
-          class="cta-btn vb"
-          href="viber://chat?number=%2B380504742490"
-        >
-          Viber
-        </a>
-        <a class="cta-btn call" href="tel:+380504742490">
-          Позвонить
-        </a>
-        <a class="cta-btn mail" href="mailto:metlitres@ukr.net">
-          Написать
-        </a>
-      </div>
-    </nav>
-  </header>
-
-  <!-- ОСНОВНОЙ КОНТЕНТ -->
-  <main>
-    <!-- Блоки с фото и подписями (слайд-шоу) -->
-    <section id="about" class="content-section">
-      <h2>Производство и возможности</h2>
-
-      <!-- 1. Наше предприятие... (фото 111–114) -->
-      <article class="info-block" id="services">
-        <div
-          class="slideshow"
-          data-images="111.jpg,112.jpg,113.jpg,114.jpg"
-        >
-          <img src="images/111.jpg" alt="Бронзовые прутки и заготовки" />
+<div class="hero">
+    <!-- Верхняя тёмная панель -->
+    <header class="top-bar">
+        <div class="lang-switcher">
+            <button class="lang-btn active">
+                <img src="images/flag-ru.jpg" alt="Русский">
+                <span>RU</span>
+            </button>
+            <button class="lang-btn">
+                <img src="images/flag-ua.png" alt="Українська">
+                <span>UA</span>
+            </button>
+            <button class="lang-btn">
+                <img src="images/flag-en.jpg" alt="English">
+                <span>EN</span>
+            </button>
         </div>
-        <div class="info-text">
-          <p>
-            Наше предприятие на собственном оборудовании изготавливает
-            бронзовые прутки и прутковые заготовки.
-          </p>
-        </div>
-      </article>
 
-      <!-- 2. Изделие по вашим чертежам (фото 221–224) -->
-      <article class="info-block">
-        <div
-          class="slideshow"
-          data-images="221.jpg,222.jpg,223.jpg,224.jpg"
-        >
-          <img src="images/221.jpg" alt="Изготовление изделий по чертежам" />
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Metal Casting Resource">
         </div>
-        <div class="info-text">
-          <p>
-            Предприятие также может изготовить по вашим чертежам изделие из
-            бронзы с указанным химическим составом.
-          </p>
-        </div>
-      </article>
+    </header>
 
-      <!-- 3. Собственная база станков (фото 331–332) -->
-      <article class="info-block">
-        <div
-          class="slideshow"
-          data-images="331.jpg,332.jpg"
-        >
-          <img src="images/331.jpg" alt="Механическая обработка" />
-        </div>
-        <div class="info-text">
-          <p>
-            Имея собственную базу металлообрабатывающих станков, мы производим
-            по вашим чертежам широкий спектр деталей — от черновой до чистовой
-            механической обработки.
-          </p>
-        </div>
-      </article>
+    <!-- Тонкая белая полоска -->
+    <div class="divider"></div>
 
-      <!-- 4. Пример механической обработки (фото 441–442) -->
-      <article class="info-block">
-        <div
-          class="slideshow"
-          data-images="441.jpg,442.jpg"
-        >
-          <img src="images/441.jpg" alt="Пример механической обработки изделий" />
-        </div>
-        <div class="info-text">
-          <p>
-            Пример механической обработки изделий.
-          </p>
-        </div>
-      </article>
-
-      <!-- 5. Спектральная лаборатория (фото 551–553) -->
-      <article class="info-block">
-        <div
-          class="slideshow"
-          data-images="551.jpg,552.jpg,553.jpg"
-        >
-          <img src="images/551.jpg" alt="Спектральная лаборатория" />
-        </div>
-        <div class="info-text">
-          <p>
-            Собственная спектральная лаборатория обеспечивает контроль
-            химического состава и оформление результатов в соответствии с
-            требованиями ГОСТ.
-          </p>
-        </div>
-      </article>
-    </section>
-  </main>
-
-  <!-- КОНТАКТЫ -->
-  <footer id="contacts" class="footer">
-    <h2>Контакты</h2>
-    <p>
-      89422, Закарпатська обл., Ужгородський район, с. Холмок,
-      вул. Свободи, б.65а., прим. 101
-    </p>
-    <p>
-      Телефон / Viber / WhatsApp / Telegram:
-      <a href="tel:+380504742490">+38 (050) 474-24-90</a>
-    </p>
-    <p>
-      E-mail:
-      <a href="mailto:metlitres@ukr.net">metlitres@ukr.net</a>,
-      <a href="mailto:ppmlr@ukr.net">ppmlr@ukr.net</a>
-    </p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+    <!-- Меню + кнопки связи -->
+    <nav class="main-nav">
+        <div class="nav-links">
+            <a href="#about">О нас</a>
+            <a href="#services">Усл

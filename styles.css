@@ -23,7 +23,7 @@ body {
 
 .top-bar {
   display: grid;
-  grid-template-columns: 1fr auto auto;
+  grid-template-columns: 1fr auto;
   align-items: center;
   column-gap: 24px;
 }
@@ -66,6 +66,7 @@ body {
   gap: 8px;
 }
 
+/* все три кнопки — бледно-золотые */
 .lang-btn {
   display: inline-flex;
   align-items: center;
@@ -73,9 +74,9 @@ body {
   border-radius: 999px;
   padding: 6px 14px;
   font-size: 14px;
-  background: #111;
-  color: #f5f5f5;
-  border: 1px solid #333;
+  background: linear-gradient(135deg, #f6d27d, #fbe9b4);
+  color: #1a1a1a;
+  border: 1px solid #d2aa4c;
   cursor: pointer;
   transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
 }
@@ -87,21 +88,13 @@ body {
   object-fit: cover;
 }
 
+/* активной делаем чуть более контрастную рамку */
 .lang-btn.active {
-  background: linear-gradient(135deg, #ffb347, #ffd863);
-  color: #1a1a1a;
-  box-shadow: 0 0 0 2px rgba(255, 179, 71, 0.3);
+  box-shadow: 0 0 0 2px rgba(255, 179, 71, 0.5);
 }
 
 .lang-btn:hover {
   transform: translateY(-1px);
-}
-
-/* Логотип справа в шапке */
-
-.header-logo img {
-  height: 60px;
-  width: auto;
 }
 
 /* Горизонтальная белая линия */
@@ -357,10 +350,6 @@ main {
   .top-bar {
     grid-template-columns: 1fr;
     row-gap: 12px;
-  }
-
-  .header-logo {
-    justify-self: flex-end;
   }
 
   .slider-block {

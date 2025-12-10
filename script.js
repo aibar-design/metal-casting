@@ -1,33 +1,36 @@
-// Простое слайд-шоу по data-images
-
+// Простой слайдер для всех блоков .slider
 document.addEventListener("DOMContentLoaded", () => {
-  const slideshows = document.querySelectorAll(".slideshow");
+    const sliders = document.querySelectorAll(".slider");
 
-  slideshows.forEach((block) => {
-    const list = (block.dataset.images || "")
-      .split(",")
-      .map((s) => s.trim())
-      .filter(Boolean);
+    sliders.forEach(slider => {
+        const slides = slider.querySelectorAll(".slide");
+        const prevBtn = slider.querySelector(".prev");
+        const nextBtn = slider.querySelector(".next");
 
-    if (list.length <= 1) return;
+        if (slides.length === 0) return;
 
-    const img = block.querySelector("img");
-    if (!img) return;
+        let current = 0;
 
-    let index = 0;
+        const showSlide = (index) => {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle("active", i === index);
+            });
+        };
 
-    setInterval(() => {
-      index = (index + 1) % list.length;
-      img.src = "images/" + list[index];
-    }, 3000);
-  });
+        const goPrev = () => {
+            current = (current - 1 + slides.length) % slides.length;
+            showSlide(current);
+        };
 
-  // Переключение активной языковой кнопки (пока только визуально)
-  const langButtons = document.querySelectorAll(".lang-btn");
-  langButtons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      langButtons.forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
+        const goNext = () => {
+            current = (current + 1) % slides.length;
+            showSlide(current);
+        };
+
+        prevBtn.addEventListener("click", goPrev);
+        nextBtn.addEventListener("click", goNext);
+
+        // Автопрокрутка (можно выключить, если не нужно)
+        setInterval(goNext, 5000);
     });
-  });
 });

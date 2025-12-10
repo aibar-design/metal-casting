@@ -1,151 +1,219 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Metal Casting Resource</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<div class="hero">
-    <!-- Верхняя тёмная панель -->
-    <header class="top-bar">
-        <div class="lang-switcher">
+<header class="top-header">
+    <div class="top-line">
+        <nav class="main-nav">
+            <a href="#about-block">О нас</a>
+            <a href="#services">Услуги</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+
+        <div class="lang-switch">
             <button class="lang-btn active">
-                <img src="images/flag-ru.jpg" alt="Русский">
+                <span class="flag-circle">🇷🇺</span>
                 <span>RU</span>
             </button>
             <button class="lang-btn">
-                <img src="images/flag-ua.png" alt="Українська">
+                <span class="flag-circle">🇺🇦</span>
                 <span>UA</span>
             </button>
             <button class="lang-btn">
-                <img src="images/flag-en.jpg" alt="English">
+                <span class="flag-circle">🇬🇧</span>
                 <span>EN</span>
             </button>
         </div>
+    </div>
 
-        <div class="logo">
-            <img src="images/logo.jpg" alt="Metal Casting Resource">
+    <div class="contacts-buttons">
+        <a class="contact-chip tg" href="https://t.me/+380504742490" target="_blank" rel="noopener">
+            ✈️ Telegram
+        </a>
+        <a class="contact-chip wa" href="https://wa.me/380504742490" target="_blank" rel="noopener">
+            💬 WhatsApp
+        </a>
+        <a class="contact-chip vb" href="viber://chat?number=%2B380504742490">
+            📞 Viber
+        </a>
+        <a class="contact-chip call" href="tel:+380504742490">
+            ☎️ Позвонить
+        </a>
+        <a class="contact-chip mail" href="mailto:metlitres@ukr.net">
+            ✉️ Написать
+        </a>
+    </div>
+
+    <!-- Герой-блок с фоном -->
+    <section class="hero">
+        <div class="hero-inner">
+            <h1 class="hero-title">Metal Casting Resource</h1>
+            <p class="hero-subtitle">
+                Бронзовое литьё и механическая обработка по вашим чертежам.
+            </p>
         </div>
-    </header>
-
-    <!-- Тонкая белая полоска -->
-    <div class="divider"></div>
-
-    <!-- Меню + кнопки связи -->
-    <nav class="main-nav">
-        <div class="nav-links">
-            <a href="#about">О нас</a>
-            <a href="#services">Услуги</a>
-            <a href="#contacts">Контакты</a>
-        </div>
-
-        <div class="contact-buttons">
-            <a class="btn tg" href="https://t.me/MetalCastingResource" target="_blank">Telegram</a>
-            <a class="btn wa" href="https://wa.me/380504742490" target="_blank">WhatsApp</a>
-            <a class="btn vb" href="viber://chat?number=%2B380504742490">Viber</a>
-            <a class="btn call" href="tel:+380504742490">Позвонить</a>
-            <a class="btn mail" href="mailto:metlitres@ukr.net">Написать</a>
-        </div>
-    </nav>
-
-    <section class="hero-text">
-        <h1>Metal Casting Resource</h1>
-        <p>Бронзовое литьё и механическая обработка по вашим чертежам.</p>
     </section>
-</div>
+</header>
 
 <main>
-    <section id="about" class="content-section">
-        <div class="slider" data-slider="1">
-            <div class="slide active"><img src="images/111.jpg" alt=""></div>
-            <div class="slide"><img src="images/112.jpg" alt=""></div>
-            <div class="slide"><img src="images/113.jpg" alt=""></div>
-            <button class="slider-btn prev">‹</button>
-            <button class="slider-btn next">›</button>
+    <!-- Блок "О нас": слева логотип, справа текст -->
+    <section class="about" id="about-block">
+        <div class="about-logo">
+            <!-- путь к логотипу: при необходимости измени имя файла -->
+            <img src="images/logo.jpg" alt="Metal Casting Resource" />
         </div>
-        <div class="section-text">
-            <h2>Бронзовые прутки и заготовки</h2>
-            <p>Наше предприятие на собственном оборудовании изготавливает бронзовые прутки
-                и прутковые заготовки.</p>
-        </div>
-    </section>
-
-    <section class="content-section">
-        <div class="slider" data-slider="2">
-            <div class="slide active"><img src="images/221.jpg" alt=""></div>
-            <div class="slide"><img src="images/222.jpg" alt=""></div>
-            <div class="slide"><img src="images/223.jpg" alt=""></div>
-            <button class="slider-btn prev">‹</button>
-            <button class="slider-btn next">›</button>
-        </div>
-        <div class="section-text">
-            <h2>Изделия по вашим чертежам</h2>
-            <p>Предприятие также может изготовить по вашим чертежам изделие из бронзы
-                с указанным химическим составом.</p>
+        <div class="about-text">
+            <h2>О нас</h2>
+            <p>
+                Наше предприятие специализируется на бронзовом литье и
+                механической обработке деталей по индивидуальным чертежам заказчика.
+                Мы работаем с современным оборудованием, контролируем качество на всех
+                этапах производства и сопровождаем заказ от заготовки до готового изделия.
+            </p>
+            <p>
+                Благодаря собственному производству и спектральной лаборатории
+                мы обеспечиваем стабильный химический состав сплавов и высокую точность
+                геометрических размеров. Наша цель — надежные и долговечные решения
+                для машиностроения, ремонта и модернизации оборудования.
+            </p>
         </div>
     </section>
 
-    <section id="services" class="content-section">
-        <div class="slider" data-slider="3">
-            <div class="slide active"><img src="images/331.jpg" alt=""></div>
-            <div class="slide"><img src="images/332.jpg" alt=""></div>
-            <button class="slider-btn prev">‹</button>
-            <button class="slider-btn next">›</button>
-        </div>
-        <div class="section-text">
-            <h2>Механическая обработка деталей</h2>
-            <p>Имея собственную базу металлообрабатывающих станков, мы производим по вашим
-                чертежам широкий спектр деталей — от черновой до чистовой механической обработки.</p>
-        </div>
+    <!-- Блоки с услугами -->
+    <section class="services" id="services">
+        <!-- 1. Бронзовые прутки -->
+        <article class="service-block">
+            <div class="service-media">
+                <div class="slider" data-slider>
+                    <button class="slider-btn prev" type="button">‹</button>
+                    <div class="slider-track">
+                        <img src="images/111.jpg" alt="Бронзовые прутки" class="slider-slide active" />
+                        <img src="images/112.jpg" alt="Бронзовые заготовки" class="slider-slide" />
+                        <img src="images/113.jpg" alt="Бронзовые заготовки" class="slider-slide" />
+                    </div>
+                    <button class="slider-btn next" type="button">›</button>
+                </div>
+            </div>
+            <div class="service-text">
+                <h2>Бронзовые прутки и заготовки</h2>
+                <p>
+                    Наше предприятие на собственном оборудовании изготавливает
+                    бронзовые прутки и прутковые заготовки с заданным химическим
+                    составом и размерами.
+                </p>
+            </div>
+        </article>
+
+        <!-- 2. Изделия по чертежам -->
+        <article class="service-block">
+            <div class="service-media">
+                <div class="slider" data-slider>
+                    <button class="slider-btn prev" type="button">‹</button>
+                    <div class="slider-track">
+                        <img src="images/221.jpg" alt="Литьё по чертежам" class="slider-slide active" />
+                        <img src="images/222.jpg" alt="Изделия из бронзы" class="slider-slide" />
+                        <img src="images/223.jpg" alt="Изделия из бронзы" class="slider-slide" />
+                    </div>
+                    <button class="slider-btn next" type="button">›</button>
+                </div>
+            </div>
+            <div class="service-text">
+                <h2>Изделия по вашим чертежам</h2>
+                <p>
+                    Предприятие может изготовить по вашим чертежам изделие из бронзы
+                    с указанным химическим составом и требуемыми допусками.
+                </p>
+            </div>
+        </article>
+
+        <!-- 3. Механическая обработка -->
+        <article class="service-block">
+            <div class="service-media">
+                <div class="slider" data-slider>
+                    <button class="slider-btn prev" type="button">‹</button>
+                    <div class="slider-track">
+                        <img src="images/331.jpg" alt="Механическая обработка" class="slider-slide active" />
+                        <img src="images/332.jpg" alt="Обработка деталей" class="slider-slide" />
+                    </div>
+                    <button class="slider-btn next" type="button">›</button>
+                </div>
+            </div>
+            <div class="service-text">
+                <h2>Механическая обработка деталей</h2>
+                <p>
+                    Мы выполняем механическую обработку бронзовых заготовок и готовых
+                    изделий по вашим чертежам, обеспечивая точное соблюдение размеров
+                    и требований к качеству поверхности.
+                </p>
+            </div>
+        </article>
+
+        <!-- 4. Примеры обработки -->
+        <article class="service-block">
+            <div class="service-media">
+                <div class="slider" data-slider>
+                    <button class="slider-btn prev" type="button">‹</button>
+                    <div class="slider-track">
+                        <img src="images/441.jpg" alt="Примеры обработки" class="slider-slide active" />
+                        <img src="images/442.jpg" alt="Примеры обработки" class="slider-slide" />
+                    </div>
+                    <button class="slider-btn next" type="button">›</button>
+                </div>
+            </div>
+            <div class="service-text">
+                <h2>Примеры механической обработки</h2>
+                <p>
+                    Мы демонстрируем примеры механической обработки изделий, чтобы вы
+                    могли оценить качество, аккуратность и стабильность результатов.
+                </p>
+            </div>
+        </article>
+
+        <!-- 5. Спектральная лаборатория -->
+        <article class="service-block">
+            <div class="service-media">
+                <div class="slider" data-slider>
+                    <button class="slider-btn prev" type="button">‹</button>
+                    <div class="slider-track">
+                        <img src="images/551.jpg" alt="Спектральный анализ" class="slider-slide active" />
+                        <img src="images/552.jpg" alt="Спектральная лаборатория" class="slider-slide" />
+                        <img src="images/553.jpg" alt="Контроль состава сплавов" class="slider-slide" />
+                    </div>
+                    <button class="slider-btn next" type="button">›</button>
+                </div>
+            </div>
+            <div class="service-text">
+                <h2>Спектральная лаборатория</h2>
+                <p>
+                    Собственная спектральная лаборатория обеспечивает контроль химического
+                    состава и оформление результатов в соответствии с требованиями ГОСТ.
+                </p>
+            </div>
+        </article>
     </section>
 
-    <section class="content-section">
-        <div class="slider" data-slider="4">
-            <div class="slide active"><img src="images/441.jpg" alt=""></div>
-            <div class="slide"><img src="images/442.jpg" alt=""></div>
-            <button class="slider-btn prev">‹</button>
-            <button class="slider-btn next">›</button>
-        </div>
-        <div class="section-text">
-            <h2>Примеры механической обработки</h2>
-            <p>Мы демонстрируем примеры механической обработки изделий, чтобы вы могли оценить
-                качество поверхности и точность выполнения.</p>
-        </div>
-    </section>
-
-    <section class="content-section">
-        <div class="slider" data-slider="5">
-            <div class="slide active"><img src="images/551.jpg" alt=""></div>
-            <div class="slide"><img src="images/552.jpg" alt=""></div>
-            <div class="slide"><img src="images/553.jpg" alt=""></div>
-            <button class="slider-btn prev">‹</button>
-            <button class="slider-btn next">›</button>
-        </div>
-        <div class="section-text">
-            <h2>Спектральная лаборатория</h2>
-            <p>Собственная спектральная лаборатория обеспечивает контроль химического состава
-                и оформление результатов в соответствии с требованиями ГОСТ.</p>
-        </div>
+    <!-- Контакты -->
+    <section class="contacts" id="contacts">
+        <h2>Контакты</h2>
+        <p>
+            89422, Закарпатська обл., Ужгородський район,<br />
+            с. Холмок, вул. Свободи, б.65а., прим. 101
+        </p>
+        <p>
+            Телефон / Viber / WhatsApp / Telegram:<br />
+            <a href="tel:+380504742490">+38 (050) 474-24-90</a>
+        </p>
+        <p>
+            E-mail: <a href="mailto:metlitres@ukr.net">metlitres@ukr.net</a><br />
+            E-mail: <a href="mailto:ppmlr@ukr.net">ppmlr@ukr.net</a>
+        </p>
     </section>
 </main>
-
-<footer id="contacts" class="footer">
-    <h2>Контакты</h2>
-    <p>
-        89422, Закарпатська обл., Ужгородський район,<br>
-        с. Холмок, вул. Свободи, б.65а., прим. 101
-    </p>
-    <p>
-        Телефон / Viber / WhatsApp / Telegram:<br>
-        <a href="tel:+380504742490">+38 (050) 474-24-90</a>
-    </p>
-    <p>
-        E-mail: <a href="mailto:metlitres@ukr.net">metlitres@ukr.net</a><br>
-        E-mail: <a href="mailto:ppmlr@ukr.net">ppmlr@ukr.net</a>
-    </p>
-</footer>
 
 <script src="script.js"></script>
 </body>

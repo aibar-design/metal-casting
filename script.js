@@ -1,4 +1,3 @@
-// Простой слайдер для всех блоков .slider
 document.addEventListener("DOMContentLoaded", () => {
     const sliders = document.querySelectorAll(".slider");
 
@@ -30,7 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
         prevBtn.addEventListener("click", goPrev);
         nextBtn.addEventListener("click", goNext);
 
-        // Автопрокрутка (можно выключить, если не нужно)
         setInterval(goNext, 5000);
     });
 });

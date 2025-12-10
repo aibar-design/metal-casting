@@ -1,4 +1,4 @@
-// Простой рабочий слайдер для всех блоков .slider
+// Простой слайдер для КАЖДОГО блока .slider
 document.addEventListener("DOMContentLoaded", () => {
   const sliders = document.querySelectorAll(".slider");
 
@@ -11,14 +11,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let current = 0;
 
-    // показать нужный слайд
     function showSlide(index) {
       slides[current].classList.remove("active");
       current = (index + slides.length) % slides.length;
       slides[current].classList.add("active");
     }
 
-    // начальное состояние
+    // стартовое состояние
     slides.forEach((slide, i) => {
       slide.classList.toggle("active", i === 0);
     });
@@ -27,11 +26,11 @@ document.addEventListener("DOMContentLoaded", () => {
     nextBtn.addEventListener("click", () => showSlide(current + 1));
   });
 
-  // Плавная прокрутка по якорям (О нас / Услуги / Контакты)
+  // Плавная прокрутка по якорям
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
     link.addEventListener("click", (e) => {
       const targetId = link.getAttribute("href");
-      if (targetId === "#" || targetId === "") return;
+      if (!targetId || targetId === "#") return;
       const targetEl = document.querySelector(targetId);
       if (!targetEl) return;
 

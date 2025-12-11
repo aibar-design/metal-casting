@@ -124,15 +124,16 @@ body {
 .hero::before {
     content: "";
     position: absolute;
-    top: 40px;            /* опустили вниз */
-    right: -80px;         /* сдвинули дальше вправо */
-    width: 60vw;          /* картинка шире */
-    height: 120%;         /* чуть ниже */
+    top: 20px;            /* опустили чуть ниже */
+    right: -150px;        /* сильнее вправо */
+    width: 65vw;          /* немного шире */
+    height: 150%;         /* чтобы не обрезалось снизу */
     background: url("images/br.png") center/cover no-repeat;
-    opacity: 0.8;         /* ярче */
+    opacity: 0.8;
     filter: none;
     z-index: 0;
 }
+
 
 /* весь контент hero — поверх фона */
 .hero * {

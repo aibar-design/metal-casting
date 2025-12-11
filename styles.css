@@ -119,18 +119,25 @@ body {
   position: relative;
   overflow: hidden;
 }
-/* фоновое фото в hero — справа, целиком, не обрезается */
+/* фоновое фото в hero — увеличенное, смещённое левее и ниже */
 .hero::before {
   content: "";
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;                                    /* тянем по высоте всего hero */
-  width: 55%;                                   /* картинка занимает правую часть */
-  background: url("images/br.png") right center / contain no-repeat;
-  opacity: 0.8;                                 /* как ты и хотела — поярче */
+  top: 50%;                                     /* ставим в вертикальный центр hero */
+  right: 0;                                     /* прижали к правому краю */
+  width: 65%;                                   /* картинка стала чуть больше */
+  height: auto;
+  aspect-ratio: 16 / 9;                         /* сохраняем пропорции */
+  background: url("images/br.png") center/contain no-repeat;
+  opacity: 0.8;
+
+  transform: translateY(-50%) translateX(10%);   /* ↓↓ КЛЮЧЕВОЕ ↓↓ */
+  /* translateY(-50%) — центрируем по вертикали
+     translateX(10%) — смещаем картинку ЛЕВЕЕ внутрь hero */
+
   z-index: 0;
 }
+
 
 /* весь контент hero — поверх фона */
 .hero * {

@@ -122,17 +122,18 @@ body {
 
 /* фоновое фото в hero, справа и выше */
 .hero::before {
-  content: "";
-  position: absolute;
-  top: -40px;
-  right: -20px;
-  width: 520px;
-  height: 520px;
-  background: url("images/br.png") center/contain no-repeat;
-  opacity: 0.25;
-  filter: blur(1px);
-  z-index: 0;
+    content: "";
+    position: absolute;
+    top: -40px;
+    right: 0;
+    width: 55vw;
+    height: 100%;
+    background: url("images/br.png") center/cover no-repeat;
+    opacity: 0.35;  /* Больше видно */
+    filter: none;   /* Без размытия */
+    z-index: 0;
 }
+
 
 /* весь контент hero — поверх фона */
 .hero * {

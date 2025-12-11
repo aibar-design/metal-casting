@@ -410,11 +410,12 @@ main {
 }
 /* Активная кнопка языка */
 .lang-btn.active {
-    background-color: #2c2c2c;   /* тёмный фон */
-    color: #fff;                 /* белый текст */
-    border-color: #444;          /* тёмная рамка */
+    background-color: #2c2c2c !important;  /* тёмный фон */
+    color: #fff !important;                /* белый текст */
+    border-color: #444 !important;         /* тёмная рамка */
 }
 
 .lang-btn.active img {
-    filter: brightness(0.85);    /* чуть затемнить флаг */
+    filter: brightness(0.75) !important;   /* затемнение флага */
 }
+

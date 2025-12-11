@@ -119,22 +119,18 @@ body {
   position: relative;
   overflow: hidden;
 }
-/* Фоновое фото hero полностью, справа */
+/* фоновое фото в hero — справа, целиком, не обрезается */
 .hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 55%;                /* регулирует размер фото, чтобы влезло полностью */
-    background-image: url("images/br.png");
-    background-size: contain;  /* ВАЖНО! Показывает всю картинку без обрезаний */
-    background-repeat: no-repeat;
-    background-position: right center;
-    opacity: 0.85;             /* чуть ярче, как ты хотела */
-    z-index: 0;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;                                    /* тянем по высоте всего hero */
+  width: 55%;                                   /* картинка занимает правую часть */
+  background: url("images/br.png") right center / contain no-repeat;
+  opacity: 0.8;                                 /* как ты и хотела — поярче */
+  z-index: 0;
 }
-
 
 /* весь контент hero — поверх фона */
 .hero * {

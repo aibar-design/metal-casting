@@ -66,7 +66,7 @@ body {
   gap: 8px;
 }
 
-/* все три кнопки — бледно-золотые */
+/* кнопки-флаги — мягкое бледное золото */
 .lang-btn {
   display: inline-flex;
   align-items: center;
@@ -74,9 +74,11 @@ body {
   border-radius: 999px;
   padding: 6px 14px;
   font-size: 14px;
-  background: linear-gradient(135deg, #f6d27d, #fbe9b4);
+
+  background: linear-gradient(135deg, #f7e9b8, #fff5d9);
+  border: 1px solid #e5c97a;
+
   color: #1a1a1a;
-  border: 1px solid #d2aa4c;
   cursor: pointer;
   transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
 }
@@ -88,9 +90,9 @@ body {
   object-fit: cover;
 }
 
-/* активной делаем чуть более контрастную рамку */
+/* активная — чуть более контрастная рамка / подсветка */
 .lang-btn.active {
-  box-shadow: 0 0 0 2px rgba(255, 179, 71, 0.5);
+  box-shadow: 0 0 0 2px rgba(230, 185, 90, 0.55);
 }
 
 .lang-btn:hover {
@@ -102,13 +104,40 @@ body {
 .header-separator {
   height: 2px;
   margin-top: 8px;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), #ffffff, rgba(255, 255, 255, 0.1));
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1),
+    #ffffff,
+    rgba(255, 255, 255, 0.1)
+  );
 }
 
 /* Hero-блок */
 
 .hero {
   padding: 32px 0 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* фоновое фото в hero, справа и выше */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -20px;
+  width: 520px;
+  height: 520px;
+  background: url("images/br.png") center/contain no-repeat;
+  opacity: 0.25;
+  filter: blur(1px);
+  z-index: 0;
+}
+
+/* весь контент hero — поверх фона */
+.hero * {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-title {
@@ -183,20 +212,13 @@ body {
   padding: 32px 5vw;
   position: relative;
   overflow: hidden;
-  background: radial-gradient(circle at 0% 0%, rgba(255, 179, 71, 0.25), transparent 50%),
+  background:
+    radial-gradient(circle at 0% 0%, rgba(255, 179, 71, 0.25), transparent 50%),
     radial-gradient(circle at 100% 100%, rgba(255, 255, 255, 0.05), transparent 55%),
     #050505;
 }
 
-.about-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url("images/br.png") center/cover no-repeat;
-  opacity: 0.15;
-  filter: blur(3px);
-  z-index: 0;
-}
+/* фон br.png отсюда убрали — он теперь в hero */
 
 .about-inner {
   position: relative;

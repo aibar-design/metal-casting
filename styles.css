@@ -408,3 +408,13 @@ main {
     max-width: 160px;
   }
 }
+/* Активная кнопка языка */
+.lang-btn.active {
+    background-color: #2c2c2c;   /* тёмный фон */
+    color: #fff;                 /* белый текст */
+    border-color: #444;          /* тёмная рамка */
+}
+
+.lang-btn.active img {
+    filter: brightness(0.85);    /* чуть затемнить флаг */
+}
